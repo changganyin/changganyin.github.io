@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="中国人民站起来了, Blog">
-    <meta name="description" content="让那些内外的反动派在我们面前发抖罢，让他们去说我们这也不行那也不行罢，中国人民的不屈不挠的努力必将稳步地达到自己的目的">
+    <meta name="keywords" content="Archives: 2026, Blog">
+    <meta name="description" content="Changgan Yin&#39;s Blog">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>中国人民站起来了 | Changgan Yin&#39;s Blog</title><meta name="robots" content="noindex">
+    <title>Archives: 2026 | Changgan Yin&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
     <style>
@@ -319,492 +319,332 @@
 
 </header>
 
-    
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                Changgan Yin&#39;s Blog
+                
+            </div>
 
-
-
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://mp-b6045dcf-2927-4865-9325-f14fa0979d3b.cdn.bspapp.com/mao.jpg')">
-    <div class="container" style="right: 0px;left: 0px;">
-        <div class="row">
-            <div class="col s12 m12 l12">
-                <div class="brand">
-                    <h1 class="description center-align post-title">中国人民站起来了</h1>
-                </div>
+            <div class="description center-align">
+                
+                <span id="subtitle"></span>
+                <script src="/libs/typed/typed.js"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: [ 
+                            
+                                "Never really desperate, only the lost of the soul",
+                            
+                                "To be, or not to be, that is the question",
+                            
+                        ],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
+                
             </div>
         </div>
     </div>
 </div>
 
 
+<script>
+    $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
+</script>
 
 
-<main class="post-container content">
+    </div>
+</div>
+
+<main class="content">
 
     
-    <div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
-<div id="artDetail">
+    <div class="container archive-calendar">
     <div class="card">
-        <div class="card-content article-info">
-            <div class="row tag-cate">
-                <div class="col s7">
-                    
-                    <div class="article-tag">
-                        
-                            <a href="/tags/China/">
-                                <span class="chip bg-color">China</span>
-                            </a>
-                        
-                            <a href="/tags/CCP/">
-                                <span class="chip bg-color">CCP</span>
-                            </a>
-                        
-                    </div>
-                    
-                </div>
-                <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/History/" class="post-category">
-                                History
-                            </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
+        <div id="post-calendar" class="card-content"></div>
+    </div>
+</div>
 
-            <div class="post-info">
-                
-                <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    1949-09-21
-                </div>
-                
+<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
+<script type="text/javascript">
+    let myChart = echarts.init(document.getElementById('post-calendar'));
 
-                
-                <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2025-05-09
-                </div>
-                
+    
 
-                
-                <div class="info-break-policy">
-                    <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    2.2k
-                </div>
-                
+    let option = {
+        title: {
+            top: 0,
+            text: 'Post Calendar',
+            left: 'center',
+            textStyle: {
+                color: '#3C4858'
+            }
+        },
+        tooltip: {
+            padding: 10,
+            backgroundColor: '#555',
+            borderColor: '#777',
+            borderWidth: 1,
+            formatter: function (obj) {
+                var value = obj.value;
+                return '<div style="font-size: 14px;">' + value[0] + '：' + value[1] + '</div>';
+            }
+        },
+        visualMap: {
+            show: true,
+            showLabel: true,
+            categories: [0, 1, 2, 3, 4],
+            calculable: true,
+            inRange: {
+                symbol: 'rect',
+                color: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127']
+            },
+            itemWidth: 12,
+            itemHeight: 12,
+            orient: 'horizontal',
+            left: 'center',
+            bottom: 0
+        },
+        calendar: [{
+            left: 'center',
+            range: ["2025-01-03", "2026-01-03"],
+            cellSize: [13, 13],
+            splitLine: {
+                show: false
+            },
+            itemStyle: {
+                color: '#196127',
+                borderColor: '#fff',
+                borderWidth: 2
+            },
+            yearLabel: {
+                show: false
+            },
+            monthLabel: {
+                nameMap: 'en',
+                fontSize: 11
+            },
+            dayLabel: {
+                formatter: '{start}  1st',
+                nameMap: 'en',
+                fontSize: 11
+            }
+        }],
+        series: [{
+            type: 'heatmap',
+            coordinateSystem: 'calendar',
+            calendarIndex: 0,
+            data: [["2025-01-03", 0], ["2025-01-04", 0], ["2025-01-05", 0], ["2025-01-06", 0], ["2025-01-07", 0], ["2025-01-08", 0], ["2025-01-09", 0], ["2025-01-10", 0], ["2025-01-11", 0], ["2025-01-12", 0], ["2025-01-13", 0], ["2025-01-14", 0], ["2025-01-15", 0], ["2025-01-16", 0], ["2025-01-17", 0], ["2025-01-18", 0], ["2025-01-19", 0], ["2025-01-20", 0], ["2025-01-21", 0], ["2025-01-22", 0], ["2025-01-23", 0], ["2025-01-24", 0], ["2025-01-25", 0], ["2025-01-26", 0], ["2025-01-27", 0], ["2025-01-28", 0], ["2025-01-29", 0], ["2025-01-30", 0], ["2025-01-31", 0], ["2025-02-01", 0], ["2025-02-02", 0], ["2025-02-03", 0], ["2025-02-04", 0], ["2025-02-05", 0], ["2025-02-06", 0], ["2025-02-07", 0], ["2025-02-08", 0], ["2025-02-09", 0], ["2025-02-10", 0], ["2025-02-11", 0], ["2025-02-12", 0], ["2025-02-13", 0], ["2025-02-14", 0], ["2025-02-15", 0], ["2025-02-16", 0], ["2025-02-17", 0], ["2025-02-18", 0], ["2025-02-19", 0], ["2025-02-20", 0], ["2025-02-21", 0], ["2025-02-22", 0], ["2025-02-23", 0], ["2025-02-24", 0], ["2025-02-25", 0], ["2025-02-26", 0], ["2025-02-27", 0], ["2025-02-28", 0], ["2025-03-01", 0], ["2025-03-02", 0], ["2025-03-03", 0], ["2025-03-04", 0], ["2025-03-05", 0], ["2025-03-06", 0], ["2025-03-07", 0], ["2025-03-08", 0], ["2025-03-09", 0], ["2025-03-10", 0], ["2025-03-11", 0], ["2025-03-12", 0], ["2025-03-13", 0], ["2025-03-14", 0], ["2025-03-15", 0], ["2025-03-16", 0], ["2025-03-17", 0], ["2025-03-18", 0], ["2025-03-19", 0], ["2025-03-20", 0], ["2025-03-21", 0], ["2025-03-22", 0], ["2025-03-23", 0], ["2025-03-24", 0], ["2025-03-25", 0], ["2025-03-26", 0], ["2025-03-27", 0], ["2025-03-28", 0], ["2025-03-29", 0], ["2025-03-30", 0], ["2025-03-31", 0], ["2025-04-01", 0], ["2025-04-02", 0], ["2025-04-03", 0], ["2025-04-04", 0], ["2025-04-05", 0], ["2025-04-06", 0], ["2025-04-07", 0], ["2025-04-08", 0], ["2025-04-09", 0], ["2025-04-10", 0], ["2025-04-11", 0], ["2025-04-12", 0], ["2025-04-13", 0], ["2025-04-14", 0], ["2025-04-15", 0], ["2025-04-16", 0], ["2025-04-17", 0], ["2025-04-18", 0], ["2025-04-19", 0], ["2025-04-20", 0], ["2025-04-21", 0], ["2025-04-22", 0], ["2025-04-23", 0], ["2025-04-24", 0], ["2025-04-25", 0], ["2025-04-26", 0], ["2025-04-27", 0], ["2025-04-28", 0], ["2025-04-29", 0], ["2025-04-30", 0], ["2025-05-01", 0], ["2025-05-02", 0], ["2025-05-03", 0], ["2025-05-04", 0], ["2025-05-05", 0], ["2025-05-06", 0], ["2025-05-07", 0], ["2025-05-08", 2], ["2025-05-09", 0], ["2025-05-10", 0], ["2025-05-11", 0], ["2025-05-12", 0], ["2025-05-13", 0], ["2025-05-14", 0], ["2025-05-15", 0], ["2025-05-16", 0], ["2025-05-17", 0], ["2025-05-18", 0], ["2025-05-19", 0], ["2025-05-20", 0], ["2025-05-21", 0], ["2025-05-22", 0], ["2025-05-23", 0], ["2025-05-24", 0], ["2025-05-25", 0], ["2025-05-26", 0], ["2025-05-27", 0], ["2025-05-28", 0], ["2025-05-29", 0], ["2025-05-30", 0], ["2025-05-31", 0], ["2025-06-01", 0], ["2025-06-02", 0], ["2025-06-03", 0], ["2025-06-04", 0], ["2025-06-05", 0], ["2025-06-06", 0], ["2025-06-07", 0], ["2025-06-08", 0], ["2025-06-09", 0], ["2025-06-10", 0], ["2025-06-11", 0], ["2025-06-12", 0], ["2025-06-13", 0], ["2025-06-14", 0], ["2025-06-15", 0], ["2025-06-16", 0], ["2025-06-17", 0], ["2025-06-18", 0], ["2025-06-19", 0], ["2025-06-20", 0], ["2025-06-21", 0], ["2025-06-22", 0], ["2025-06-23", 0], ["2025-06-24", 0], ["2025-06-25", 0], ["2025-06-26", 0], ["2025-06-27", 0], ["2025-06-28", 0], ["2025-06-29", 0], ["2025-06-30", 0], ["2025-07-01", 0], ["2025-07-02", 0], ["2025-07-03", 0], ["2025-07-04", 0], ["2025-07-05", 0], ["2025-07-06", 0], ["2025-07-07", 0], ["2025-07-08", 0], ["2025-07-09", 0], ["2025-07-10", 0], ["2025-07-11", 0], ["2025-07-12", 0], ["2025-07-13", 0], ["2025-07-14", 0], ["2025-07-15", 0], ["2025-07-16", 0], ["2025-07-17", 0], ["2025-07-18", 0], ["2025-07-19", 0], ["2025-07-20", 0], ["2025-07-21", 0], ["2025-07-22", 0], ["2025-07-23", 0], ["2025-07-24", 0], ["2025-07-25", 0], ["2025-07-26", 0], ["2025-07-27", 0], ["2025-07-28", 0], ["2025-07-29", 0], ["2025-07-30", 0], ["2025-07-31", 0], ["2025-08-01", 0], ["2025-08-02", 0], ["2025-08-03", 0], ["2025-08-04", 0], ["2025-08-05", 0], ["2025-08-06", 0], ["2025-08-07", 0], ["2025-08-08", 0], ["2025-08-09", 0], ["2025-08-10", 0], ["2025-08-11", 0], ["2025-08-12", 0], ["2025-08-13", 0], ["2025-08-14", 0], ["2025-08-15", 0], ["2025-08-16", 0], ["2025-08-17", 0], ["2025-08-18", 0], ["2025-08-19", 0], ["2025-08-20", 0], ["2025-08-21", 0], ["2025-08-22", 0], ["2025-08-23", 0], ["2025-08-24", 0], ["2025-08-25", 0], ["2025-08-26", 0], ["2025-08-27", 0], ["2025-08-28", 0], ["2025-08-29", 0], ["2025-08-30", 0], ["2025-08-31", 0], ["2025-09-01", 0], ["2025-09-02", 0], ["2025-09-03", 0], ["2025-09-04", 0], ["2025-09-05", 0], ["2025-09-06", 0], ["2025-09-07", 0], ["2025-09-08", 0], ["2025-09-09", 0], ["2025-09-10", 0], ["2025-09-11", 0], ["2025-09-12", 0], ["2025-09-13", 0], ["2025-09-14", 0], ["2025-09-15", 0], ["2025-09-16", 0], ["2025-09-17", 0], ["2025-09-18", 0], ["2025-09-19", 0], ["2025-09-20", 0], ["2025-09-21", 0], ["2025-09-22", 0], ["2025-09-23", 0], ["2025-09-24", 0], ["2025-09-25", 0], ["2025-09-26", 0], ["2025-09-27", 0], ["2025-09-28", 0], ["2025-09-29", 0], ["2025-09-30", 0], ["2025-10-01", 0], ["2025-10-02", 0], ["2025-10-03", 0], ["2025-10-04", 0], ["2025-10-05", 0], ["2025-10-06", 0], ["2025-10-07", 0], ["2025-10-08", 0], ["2025-10-09", 0], ["2025-10-10", 0], ["2025-10-11", 0], ["2025-10-12", 0], ["2025-10-13", 0], ["2025-10-14", 0], ["2025-10-15", 0], ["2025-10-16", 0], ["2025-10-17", 0], ["2025-10-18", 0], ["2025-10-19", 0], ["2025-10-20", 0], ["2025-10-21", 0], ["2025-10-22", 0], ["2025-10-23", 0], ["2025-10-24", 0], ["2025-10-25", 0], ["2025-10-26", 0], ["2025-10-27", 0], ["2025-10-28", 0], ["2025-10-29", 0], ["2025-10-30", 0], ["2025-10-31", 0], ["2025-11-01", 0], ["2025-11-02", 0], ["2025-11-03", 0], ["2025-11-04", 0], ["2025-11-05", 0], ["2025-11-06", 0], ["2025-11-07", 0], ["2025-11-08", 0], ["2025-11-09", 0], ["2025-11-10", 0], ["2025-11-11", 0], ["2025-11-12", 0], ["2025-11-13", 0], ["2025-11-14", 0], ["2025-11-15", 0], ["2025-11-16", 0], ["2025-11-17", 0], ["2025-11-18", 0], ["2025-11-19", 0], ["2025-11-20", 0], ["2025-11-21", 0], ["2025-11-22", 0], ["2025-11-23", 0], ["2025-11-24", 0], ["2025-11-25", 0], ["2025-11-26", 0], ["2025-11-27", 0], ["2025-11-28", 0], ["2025-11-29", 0], ["2025-11-30", 0], ["2025-12-01", 0], ["2025-12-02", 0], ["2025-12-03", 0], ["2025-12-04", 0], ["2025-12-05", 0], ["2025-12-06", 0], ["2025-12-07", 0], ["2025-12-08", 0], ["2025-12-09", 0], ["2025-12-10", 0], ["2025-12-11", 0], ["2025-12-12", 0], ["2025-12-13", 0], ["2025-12-14", 0], ["2025-12-15", 0], ["2025-12-16", 0], ["2025-12-17", 0], ["2025-12-18", 0], ["2025-12-19", 0], ["2025-12-20", 0], ["2025-12-21", 0], ["2025-12-22", 0], ["2025-12-23", 0], ["2025-12-24", 0], ["2025-12-25", 0], ["2025-12-26", 0], ["2025-12-27", 0], ["2025-12-28", 0], ["2025-12-29", 0], ["2025-12-30", 0], ["2025-12-31", 0], ["2026-01-01", 0], ["2026-01-02", 0], ["2026-01-03", 3]]
+        }]
 
-                
-                <div class="info-break-policy">
-                    <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    7 Min
-                </div>
-                
+    };
 
-                
-                    <div id="busuanzi_container_page_pv" class="info-break-policy">
-                        <i class="far fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
-                        <span id="busuanzi_value_page_pv"></span>
-                    </div>
-				
-            </div>
-        </div>
-        <hr class="clearfix">
+    myChart.setOption(option);
+</script>
 
+    
+
+    
+
+    <div id="cd-timeline" class="container">
         
-
-        
-
-        <div class="card-content article-card-content">
-            <div id="articleContent">
-                <h1 id="中国人民站起来了">中国人民站起来了</h1>
-<p>诸位代表先生们，全国人民所渴望的政治协商会议现在开幕了。</p>
-<p>我们的会议包括600多位代表，代表着全中国所有的民主党派，人民团体，人民解放军，各地区，各民族和国外华侨。这就说明，我们的会议是一个全国人民大团结的会议。这种全国人民大团结之所以能够成功，是因为我们战胜了美国帝国主义所援助的国民党反动政府。在3年多的时间内，英勇的世界上少有的中国人民解放军，战胜了美国援助的国民党反动政府所有的数百万军队的进攻，并使自己转入反攻和进攻。现在，数百万人民解放军的野战军已经打到接近台湾，广东，广西，贵州，四川和新疆的地区去了，中国人民的大多数已经获得了解放。在3年多的时间内，全国人民团结起来，援助人民解放军，反对了自己的敌人，取得了基本的胜利。在这个基础上，召开了今天的人民政治协商会议。</p>
-<p>我们的会议之所以称为政治协商会议，是因为3年以前我们曾和蒋介石国民党一道开过一次政治协商会议。那次会议的结果是被蒋介石国民党及其帮凶们破坏了，但是已在人民中留下了不可磨灭的印象。那次会议证明，和帝国主义的走狗蒋介石国民党及其帮凶们一道是不能解决任何有利于人民的任务的。即使勉强地做了决议也是无益的，一待时机成熟他们就要撕毁一切决议，并以残酷的战争反对人民。那次会议的唯一收获是给了人民以深刻的教育，使人民懂得：和帝国主义的走狗蒋介石国民党及其帮凶们决无妥协的余地，或者是推翻这些敌人，或者被这些敌人所屠杀和压迫，二者必居其一，其他的道路是没有的。中国人民在中国共产党的领导之下，在3年多的时间内，很快地觉悟起来，并且把自己组织起来，形成了全国规模的反对帝国主义、封建主义、官僚资本主义及其集中的代表者国民党反动政府的统一战线，援助人民解放战争，基本上打倒了国民党反动政府，推翻了帝国主义在中国的统治，恢复了政治协商会议。</p>
-<p>现在的中国人民政治协商会议是在完全新的基础上召开的，它且有代表全国人民的性质，它获得全国人民的信任和拥护。因此，中国人民政治协商会议宣布自己执行全国人民代表大会的职权。中国人民政治协商会议在自己的议程中将要制定中国人民政治协商会议的组织法，制定中华人民共和国中央人民政府的组织，制定中国人民政治协商会议的共同纲领，选举中国人民政治协商会议全国委员会，选举中华人民共和国中央人民政府委员会，制定中华人民共和国的国旗和国徽，决定中华人民共和国国都的所在地以及采取和世界大多数国家一样的年号。</p>
-<p>诸位代表先生们，我们有一个共同的感觉，这就是我们的工作将写在人类的历史上，它将表明：占人类总数四分之一的中国人从此站立起来了。中国人从来就是一个伟大的通用性的勤劳的民族，只是在近代落伍了。这种落伍，完全是被外国帝国主义和本国反动政府所压迫和剥削的结果。一百多年以来，我们的先人以不屈不挠的斗争反对内外压迫者，从来没有停止过，其中包括伟大的中国革命先行者孙中山先生所领导的辛亥革命在内。我们的先人指示我们，叫我们完成他们的遗志。我们现在是这样做了。我们团结起来，以人民解放战争和人民大革命打倒了内外压迫者，宣布中华人民共和国的成立了。我们的民族将从此列入爱好和平自由的世界各民族的大家庭，以通用性而勤劳的姿态工作着，创造自己的文明和幸福，同时也促进世界的和平和自由。我们的民族将再也不是一个被人侮辱的民族了，我们已经站起来了。我们的革命已经获得全世界广大人民的同情和欢呼，我们的朋友遍于全世界。</p>
-<p>我们的革命工作还没有完结，人民解放战争和人民革命运动还在向前发展，我们还要继续努力。帝国主义者和国内反动派决不甘心于他们的失败，他们还要作最后的挣扎。在全国平定以后，他们也还会以各种方式从事破坏和捣乱，他们将每日每时企图在中国复辟。这是必然的，毫无疑义的，我们务必不要松懈自己的警惕性。</p>
-<p>我们的人民民主专政的国家制度是保障人民革命的胜利成果和反对内外敌人的复辟阴谋的有力的武器，我们必须牢牢地掌握这个武器。在国际上，我们必须和一切爱好和平自由的国家和人民团结在一起，首先是和苏联及各新民主国家团结在一起，使我们的保障人民革命胜利成果和反对内外敌人复辟阴谋的斗争不致于孤立地位。只要我们坚持人民民主专政和团结国际友人，我们就会是永远胜利的。</p>
-<p>人民民主专政和团结国际友人，将使人们的建设工作获得迅速的成功。全国规模的经济建设工作业已摆在我们面前。我们的极好条件是有4.75亿的人口和960万平方公里的国土。我们面前的困难是有的，而且是很多的，但是我们确信：一切困难都将被全国人民的英勇奋斗所战胜。中国人民已经具有战胜困难的极其丰富的经验。如果我们的先人和我们自己能够渡过长期的极端艰难的岁月，战胜了强大的内外反动派，为什么不能在胜利以后建设一个繁荣昌盛的国家呢?只要我们仍然保持艰苦奋斗的作风，只要我们团结一致，只要我们坚持人民民主专政和团结国际友人，我们就能在经济战线上迅速地获得胜利。</p>
-<p>随着经济建设的高潮的到来，不可避免地将要出现一个文化建设的高潮。中国人被人认为不文明的时代已经过去了，我们将以一个具有高度文化的民族出现于世界。</p>
-<p>我们的国防将获得巩固，不允许任何帝国主义者再来侵略我们的国土。在英勇的经过了考验的人民解放军的基础上，我们的人民武装力量必须保存和发展起来。我们将不但有一个强大的陆军，而且有一个强大的空军和一个强大的海军。</p>
-<p>让那些内外的反动派在我们面前发抖罢，让他们去说我们这也不行那也不行罢，中国人民的不屈不挠的努力必将稳步地达到自己的目的。</p>
-<p>在人民解放战争和人民革命中牺牲的人民英雄永垂不朽！</p>
-<p>庆贺人民解放战争和人民革命的胜利！</p>
-<p>庆贺中华人民共和国的成立!</p>
-<p>庆贺中国人民政治协商会议的成功！</p>
-<br>
-<p>公元一九四九年九月二十一日</p>
-<p>北京</p>
-<p>毛泽东</p>
-<!-- flag of hidden posts -->
-                
-            </div>
-            <hr/>
+        <div class="cd-timeline-block">
 
             
-
-    <div class="reprint" id="reprint-statement">
-        
-            <div class="reprint__author">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-user">
-                        Author:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">毛泽东</a>
-                </span>
+            
+            
+            <div class="cd-timeline-img year" data-aos="zoom-in-up">
+                <a href="/archives/2026">2026</a>
             </div>
-            <div class="reprint__type">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-link">
-                        Link:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="https://changganyin.github.io/1949/09/21/mao/">https://changganyin.github.io/1949/09/21/mao/</a>
-                </span>
+            
+
+            
+            
+            
+            <div class="cd-timeline-img month" data-aos="zoom-in-up">
+                <a href="/archives/2026/01">01</a>
             </div>
-            <div class="reprint__notice">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-copyright">
-                        Reprint policy:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    All articles in this blog are used except for special statements
-                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    reprint policy. If reproduced, please indicate source
-                    <a href="/about" target="_blank">毛泽东</a>
-                    !
-                </span>
+            
+
+            
+            <div class="cd-timeline-img day" data-aos="zoom-in-up">
+                <span>03</span>
             </div>
-        
-    </div>
+            <article class="cd-timeline-content" data-aos="fade-up">
+                <div class="article col s12 m6">
+                    <div class="card">
+                        <a href="/2026/01/03/system-safety/">
+                            <div class="card-image">
+                                
+                                
+                                <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="System Safety">
+                                
+                                <span class="card-title">System Safety</span>
+                            </div>
+                        </a>
+                        <div class="card-content article-content">
+                            <div class="summary block-with-text">
+                                
+                                    华科《系统安全实验》
+                                
+                            </div>
+                            <div class="publish-info">
+                                <span class="publish-date">
+                                    <i class="far fa-clock fa-fw icon-date"></i>2026-01-03
+                                </span>
+                                <span class="publish-author">
+                                    
+                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                    
+                                    <a href="/categories/Study/" class="post-category">
+                                    Study
+                                    </a>
+                                    
+                                    
+                                </span>
+                            </div>
+                        </div>
 
-    <script async defer>
-      document.addEventListener("copy", function (e) {
-        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
-        M.toast({html: toastHTML})
-      });
-
-      function navToReprintStatement() {
-        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
-      }
-    </script>
-
-
-
-            <div class="tag_share" style="display: block;">
-                <div class="post-meta__tag-list" style="display: inline-block;">
-                    
-                        <div class="article-tag">
+                        
+                        <div class="card-action article-tags">
                             
-                                <a href="/tags/China/">
-                                    <span class="chip bg-color">China</span>
-                                </a>
-                            
-                                <a href="/tags/CCP/">
-                                    <span class="chip bg-color">CCP</span>
-                                </a>
+                            <a href="/tags/HUST/"><span class="chip bg-color">HUST</span></a>
                             
                         </div>
-                    
-                </div>
-                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
-                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
-<div id="article-share">
-
-    
-    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="/libs/share/js/social-share.min.js"></script>
-    
-
-    
-
-</div>
-
-                </div>
-            </div>
-            
-                <div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        
                     </div>
                 </div>
-            </div>
+            </article>
         </div>
-    </div>
-</div>
-
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
+        
+        <div class="cd-timeline-block">
 
             
-        </div>
-    </div>
+            
 
-    
+            
+            
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-<article id="prenext-posts" class="prev-next articles">
-    <div class="row article-row">
-        
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
+            
+            <div class="cd-timeline-img day" data-aos="zoom-in-up">
+                <span>03</span>
             </div>
-            <div class="card">
-                <a href="/1949/09/21/mao/">
-                    <div class="card-image">
+            <article class="cd-timeline-content" data-aos="fade-up">
+                <div class="article col s12 m6">
+                    <div class="card">
+                        <a href="/2026/01/03/operating-system/">
+                            <div class="card-image">
+                                
+                                
+                                <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Operating System">
+                                
+                                <span class="card-title">Operating System</span>
+                            </div>
+                        </a>
+                        <div class="card-content article-content">
+                            <div class="summary block-with-text">
+                                
+                                    华科《操作系统实验》
+                                
+                            </div>
+                            <div class="publish-info">
+                                <span class="publish-date">
+                                    <i class="far fa-clock fa-fw icon-date"></i>2026-01-03
+                                </span>
+                                <span class="publish-author">
+                                    
+                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                    
+                                    <a href="/categories/Study/" class="post-category">
+                                    Study
+                                    </a>
+                                    
+                                    
+                                </span>
+                            </div>
+                        </div>
+
                         
-                        <img src="https://mp-b6045dcf-2927-4865-9325-f14fa0979d3b.cdn.bspapp.com/mao.jpg" class="responsive-img" alt="中国人民站起来了">
+                        <div class="card-action article-tags">
+                            
+                            <a href="/tags/HUST/"><span class="chip bg-color">HUST</span></a>
+                            
+                        </div>
                         
-                        <span class="card-title">中国人民站起来了</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            让那些内外的反动派在我们面前发抖罢，让他们去说我们这也不行那也不行罢，中国人民的不屈不挠的努力必将稳步地达到自己的目的
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>1949-09-21
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/History/" class="post-category">
-                                    History
-                                </a>
-                            
-                            
-                        </span>
                     </div>
                 </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/China/">
-                        <span class="chip bg-color">China</span>
-                    </a>
-                    
-                    <a href="/tags/CCP/">
-                        <span class="chip bg-color">CCP</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
+            </article>
         </div>
         
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/1949/09/21/mao/">
-                    <div class="card-image">
-                        
-                        <img src="https://mp-b6045dcf-2927-4865-9325-f14fa0979d3b.cdn.bspapp.com/mao.jpg" class="responsive-img" alt="中国人民站起来了">
-                        
-                        <span class="card-title">中国人民站起来了</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            让那些内外的反动派在我们面前发抖罢，让他们去说我们这也不行那也不行罢，中国人民的不屈不挠的努力必将稳步地达到自己的目的
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>1949-09-21
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/History/" class="post-category">
-                                    History
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
+        <div class="cd-timeline-block">
 
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/China/">
-                        <span class="chip bg-color">China</span>
-                    </a>
-                    
-                    <a href="/tags/CCP/">
-                        <span class="chip bg-color">CCP</span>
-                    </a>
-                    
-                </div>
-                
+            
+            
+
+            
+            
+
+            
+            <div class="cd-timeline-img day" data-aos="zoom-in-up">
+                <span>03</span>
             </div>
+            <article class="cd-timeline-content" data-aos="fade-up">
+                <div class="article col s12 m6">
+                    <div class="card">
+                        <a href="/2026/01/03/network-security/">
+                            <div class="card-image">
+                                
+                                
+                                <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Network Security">
+                                
+                                <span class="card-title">Network Security</span>
+                            </div>
+                        </a>
+                        <div class="card-content article-content">
+                            <div class="summary block-with-text">
+                                
+                                    华科《计算机网络安全实验》
+                                
+                            </div>
+                            <div class="publish-info">
+                                <span class="publish-date">
+                                    <i class="far fa-clock fa-fw icon-date"></i>2026-01-03
+                                </span>
+                                <span class="publish-author">
+                                    
+                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                    
+                                    <a href="/categories/Study/" class="post-category">
+                                    Study
+                                    </a>
+                                    
+                                    
+                                </span>
+                            </div>
+                        </div>
+
+                        
+                        <div class="card-action article-tags">
+                            
+                            <a href="/tags/HUST/"><span class="chip bg-color">HUST</span></a>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </article>
         </div>
         
     </div>
-</article>
-
-</div>
-
-
-
-<!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
-
-
-
-<!-- 代码语言 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
-
-
-<!-- 代码块复制 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
-
-
-<!-- 代码块收缩 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
-
-
-
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
-</script>
-
-    
 
 </main>
 
